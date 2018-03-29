@@ -59,7 +59,7 @@ func (l *List) Remove() string {
 	return removed
 }
 
-// GetNeighbors (Public) -
+// GetNeighbors (Public) - Gets the neighbors at a vertex
 func (l *List) GetNeighbors(vert string) string {
 	for current := l.head.next; current != nil; current = current.next {
 		if current.vertex == vert {
@@ -79,7 +79,7 @@ func (l *List) Contains(vert string) bool {
 	return false
 }
 
-// RemoveVert (Public) -
+// RemoveVert (Public) - finds a vertex and removes it from the list, returns <nil> if nothing found
 func (l *List) RemoveVert(vert string) string {
 	if l.size == 0 {
 		return "<nil>"
